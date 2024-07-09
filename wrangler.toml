@@ -36,10 +36,20 @@ compatibility_flags = ["nodejs_compat"]
 
 # Bind a D1 database. D1 is Cloudflare’s native serverless SQL database.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#d1-databases
-# [[d1_databases]]
-# binding = "MY_DB"
-# database_name = "my-database"
-# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+[[d1_databases]]
+binding = "MY_DB"
+database_name = "i100standard"
+database_id = "81a91b50-aefb-408a-b1d7-7ec37ed15764"
+
+[[d1_databases]]
+binding = "JAKARTA_DB"
+database_name = "jakarta"
+database_id = "6a17a467-59c5-4088-a904-80632c639971"
+
+[[d1_databases]]
+binding = "BANDUNG_DB"
+database_name = "indomascot_new"
+database_id = "ddb6e132-94f2-42c9-84af-3fc206f8054c"
 
 # Bind a dispatch namespace. Use Workers for Platforms to deploy serverless functions programmatically on behalf of your customers.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#dispatch-namespace-bindings-workers-for-platforms
