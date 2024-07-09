@@ -24,6 +24,10 @@ export default {
 		consola.info('ctx');
 		consola.log(ctx);
 
-		return new Response('Hello World!');
+		const { JAKARTA_DB } = env;
+		const statement = JAKARTA_DB.prepare('SELECT * FROM penggunas');
+		const { results } = await statement.all();
+
+		return new Response(JSON.stringify(results));
 	},
 } satisfies ExportedHandler<Env>;
