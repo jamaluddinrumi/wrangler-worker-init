@@ -1,0 +1,24 @@
+{
+  "name": "wrangler-worker-init",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types",
+    "proxy": "local-ssl-proxy --key ../127.0.0.1+7-key.pem --cert ../127.0.0.1+7.pem --source 8888 --target 8787"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@cloudflare/vitest-pool-workers": "^0.4.5",
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "typescript": "^5.4.5",
+    "vitest": "1.5.0",
+    "wrangler": "^3.60.3"
+  },
+  "dependencies": {
+    "consola": "^3.2.3"
+  }
+}
